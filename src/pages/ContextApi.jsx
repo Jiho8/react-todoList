@@ -19,7 +19,9 @@ function ContextApi({children}) {
     }
 
     useEffect(()=>{
-      axios.get(`${process.env.REACT_APP_APIURL}/todo`)
+      axios.get(`${process.env.REACT_APP_APIURL}/todo`, {
+        headers:{"Content-Type": "application/json"}
+      })
       .then(res=>{
           setTodo2(res.data)
       })
