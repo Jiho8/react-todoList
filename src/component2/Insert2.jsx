@@ -17,7 +17,7 @@ function Insert2() {
 
         //axios.post(`${process.env.REACT_APP_APIURL}/todo/insert`, d)
         axios({
-            url:`${process.env.REACT_APP_APIURL}/todo`,
+            url:`${process.env.REACT_APP_APIURL}/todo/insert`,
             method:"post",
             data:JSON.stringify(d),
             headers:{"Content-Type": "application/json"}
