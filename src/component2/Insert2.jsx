@@ -26,7 +26,7 @@ function Insert2() {
             setTodo2(res.data)
         })
 
-        e.target.reset();
+        // e.target.reset();
     }
 
     return (
