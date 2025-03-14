@@ -18,9 +18,9 @@ function List2() {
         const updatedDone = !done;
 
         axios({
-            url: (`${process.env.REACT_APP_APIURL}/todo`, {"id":id, "done":updatedDone}),
+            url: `${process.env.REACT_APP_APIURL}/todo`,
             method:"put",
-            data:JSON.stringify(d),
+            data:JSON.stringify({ id:id, done:updatedDone }),
             headers:{"Content-Type": "application/json"}
         })
         .then(res=>{
