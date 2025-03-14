@@ -15,7 +15,7 @@ function Insert2() {
             label: label
         }
 
-        axios.post(`${process.env.REACT_APP_APIURL}/insert`, d)
+        axios.post(`${process.env.REACT_APP_APIURL}/todo/insert`, d)
         .then( res => {
             setTodo2(res.data)
         })
