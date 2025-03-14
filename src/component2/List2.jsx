@@ -17,7 +17,7 @@ function List2() {
         // 이 코드를 추가하지 않으면 체크박스 클릭 전 데이터가 전송되어 화면에 변화가 X
         const updatedDone = !done;
 
-        axios.put('http://localhost:3000/todo', {"id":id, "done":updatedDone})
+        axios.put(`${process.env.REACT_APP_APIURL}/todo`, {"id":id, "done":updatedDone})
         .then(res=>{
             setTodo2(res.data);
         })
@@ -25,7 +25,7 @@ function List2() {
 
     function del(id){
         // 경로와 id값 서버로 보내주며 서버에 데이터 요청.
-        axios.delete('http://localhost:3000/todo/delete', {
+        axios.delete(`${process.env.REACT_APP_APIURL}/todo/delete`, {
             data: {
                 id: id
             }

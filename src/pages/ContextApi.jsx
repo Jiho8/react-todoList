@@ -19,7 +19,7 @@ function ContextApi({children}) {
     }
 
     useEffect(()=>{
-      axios.get('http://localhost:3000/todo')
+      axios.get(`${process.env.REACT_APP_APIURL}/todo`)
       .then(res=>{
           setTodo2(res.data)
       })
